@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <title>Productivity</title>
+</head>
+<body>
+    
+    <div class="hero">
+        <div class="container">
+            <div class="sidebar active">
+                <div class="menu-btn">
+                    <i class="ph-bold ph-caret-left"></i>
+                </div>
+                <div class="head">
+                    <div class="user-img">
+                        <img src="user.png" alt="UserProfile picture">
+                    </div>
+                    <div class="user-details">
+                        <p class="title">Lyn JS Site</p>
+                        <p class="name">Productivity Tools</p>
+                    </div>
+                </div>
+                <div class="nav">
+                    <div class="menu">
+                        <p class="title">Main Tools</p>
+                        <ul>
+                            <li>
+                                <a href="#calculator">
+                                    <i class="icon ph-bold ph-calculator"></i>
+                                    <span class="text">Calculator</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#clock">
+                                    <i class="icon ph-bold ph-clock"></i>
+                                    <span class="text">Clock</span>
+                                    <i class="arrow ph-bold ph-caret-down"></i>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#clock">
+                                            <span class="text">Stop Watch</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#clock">
+                                            <span class="text">Timer</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="active">
+                                <a href="#to-do-list">
+                                    <i class="icon ph-bold ph-file-text"></i>
+                                    <span class="text">To Do List</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#notes">
+                                    <i class="icon ph-bold ph-calendar-blank"></i>
+                                    <span class="text">Notes</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#other-tools">
+                                    <i class="icon ph-bold ph-chart-bar"></i>
+                                    <span class="text">Other Tools</span>
+                                    <i class="arrow ph-bold ph-caret-down"></i>
+                                </a>
+                                <ul class="sub-menu">
+                                    <li>
+                                        <a href="#other-tools">
+                                            <span class="text">Age Calculator</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#other-tools">
+                                            <span class="text">Weather App</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Settings and Account
+                    <div class="menu">
+                        <p class="title">Settings</p>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-gear"></i>
+                                    <span class="text">Settings</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu">
+                        <p class="title">Account</p>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-info"></i>
+                                    <span class="text">Help</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="icon ph-bold ph-sign-out"></i>
+                                    <span class="text">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    -->
+                </div>
+            </div>
+        </div>
+        <div class = "right-container">
+            <section id="calculator">
+                <p>Calculator</p>
+                <form>
+                    <div class="display">
+                        <input type="text" name="display">
+                    </div>
+                    <div>
+                        <input type="button" value="AC" onclick="display.value = '' " class="operator">
+                        <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)" class="operator">
+                        <input type="button" value="." onclick="display.value += '.' " class="operator">
+                        <input type="button" value="/"onclick="display.value += '/' " class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="display.value += '7' ">
+                        <input type="button" value="8" onclick="display.value += '8' ">
+                        <input type="button" value="9" onclick="display.value += '9' ">
+                        <input type="button" value="x" onclick="display.value += '*' " class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="display.value += '4' ">
+                        <input type="button" value="5" onclick="display.value += '5' ">
+                        <input type="button" value="6" onclick="display.value += '6' ">
+                        <input type="button" value="-" onclick="display.value += '-' " class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="display.value += '1' ">
+                        <input type="button" value="2" onclick="display.value += '2' ">
+                        <input type="button" value="3" onclick="display.value += '3' ">
+                        <input type="button" value="+" onclick="display.value += '+' " class="operator">
+                    </div>
+                    <div>
+                        <input type="button" value="00" onclick="display.value += '00' ">
+                        <input type="button" value="0" onclick="display.value += '0' ">
+                        <input type="button" value="=" class="equal operator" onclick="display.value = eval(display.value)">
+                    </div>
+                </form>
+            </section>
+            <section id="clock">
+                <div class="other-tools-container">
+                    <div class="stop-watch">
+                        <p>Stop Watch</p>
+                        <!--<h1 class="timer">
+                            <span class="hours">00</span>:
+                            <span class="minutes">00</span>:
+                            <span class="seconds">00</span>
+                        </h1>
+                        <ol class="lap_box"></ol>-->
+                        <h1 id="displayTime">00:00:00</h1>
+                        <!--<div class="bottombut">
+                            <div class="btns">
+                                <button class="reset">Reset</button>
+                                <button class="toggle">Start</button>
+                                <button class="lap">Lap</button>
+                            </div>
+                        </div>-->
+                        <div class="sw-buttons">
+                            <img src="stop.png" alt="SW-Stop" onclick="watchStop()">
+                            <img src="play.png" data-image="play" id="play-clock" alt="SW-Play" onclick="watchStart()">
+                            <img src="replay.png" alt="SW-Replay" onclick="watchReset()">
+                        </div>
+                    </div>
+                    <div class="timer">
+                        <p>Timer</p>
+                    </div>
+                </div>
+            </section>
+            <section id="to-do-list">
+                <p>To Do List</p>
+                <div class="todo-app">
+                    <div class="row">
+                        <input type="text" id="task-input-box" placeholder="Add your task here">
+                        <button onclick="addTask()">Add Task</button>
+                    </div>
+                    <ul id="task-list-container">
+                        <li>List task</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="notes">
+                <p>Notes</p>
+                <button class="notes-btn"><img src="add-note.png">Create Note</button>
+                <div class="notes-container">
+                    Note content
+                </div>
+            </section>
+            <section id="other-tools">
+                <div class="other-tools-container">
+                    <div class="age-calculator">
+                        <p>Age Calculator</p>
+                        <div class="agec-input-box">
+                            <form>
+                                <input id="date" type="date" class="form-control" placeholder="Select Date">
+                            </form>
+                            <button onclick="calcAge()">Calculate Age</button>
+                        </div>
+                        <p id="result"></p>
+                    </div>
+                    <div class="weather-app">
+                        <p>Weather App</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.js"
+    integrity="sha512-8Z5++K1rB3U+USaLKG6o08uWWBhdYsM3hmdirnOEWp8h2B1a0ikj5zBz]Xs8QOrvY90xEnD2QDkbSKKpfqcIWw=="
+    crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+</body>
+</html>
